@@ -1,0 +1,36 @@
+.section__1 {
+  .container {
+    border-bottom: $lineBlack;
+  }
+
+  .section__1__story {
+    .description {
+      font-size: 14px;
+    }
+
+    .section__1__content {
+      background-color: #f7f7f7;
+
+      h5 {
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .section__1__story-goc-nhin {
+      border-left: $lineBlack;
+
+      h6:nth-child(1) {
+        color: $colorPrimary;
+      }
+
+      .img__auth {
+        border-radius: 100%;
+        width: 50px;
+      }
+    }
+  }
+}

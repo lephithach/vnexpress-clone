@@ -1,0 +1,2202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VnExpress - Báo tiếng Việt nhiều người xem nhất</title>
+    <link
+      rel="shortcut icon"
+      href="./images/vnexpress-favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="ontop" title="Lên đầu trang" onclick="onTop()">
+      <i class="bi bi-arrow-up-circle-fill"></i>
+    </div>
+
+    <div class="modal modal__login">
+      <div class="modal__container">
+        <span class="modal__btn__close">
+          <i class="bi bi-x"></i>
+        </span>
+
+        <div class="modal__header">
+          <a class="modal__btn-nav active" href="#" id="btn__form__login"
+            >Đăng nhập</a
+          >
+          <a class="modal__btn-nav" href="#" id="btn__form__register"
+            >Tạo tài khoản</a
+          >
+        </div>
+
+        <div class="modal__main">
+          <div class="modal__left show" id="modal__login__left">
+            <h6 class="modal__left-title">Đăng nhập với email</h6>
+            <form action="#" id="form-login">
+              <div class="form-group">
+                <label for="email_login"></label>
+                <input
+                  type="email"
+                  id="email_login"
+                  class="form-control"
+                  placeholder="Email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="password_login"></label>
+                <input
+                  type="password"
+                  id="password_login"
+                  class="form-control"
+                  placeholder="Mật khẩu"
+                />
+                <span class="show-password">
+                  <i class="bi bi-eye-fill"></i>
+                </span>
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-block btn-submit">
+                  Đăng nhập
+                </button>
+              </div>
+
+              <a href="#">Lấy lại mật khẩu</a>
+            </form>
+          </div>
+
+          <div class="modal__right show" id="modal__login__right">
+            <h6 class="modal__right-title">Đăng nhập với</h6>
+
+            <div class="social__container">
+              <a href="#" class="social-group facebook">
+                <i class="bi bi-facebook"></i>
+                <span>Facebook</span>
+              </a>
+
+              <a href="#" class="social-group google">
+                <i class="bi bi-google"></i>
+                <span>Google</span>
+              </a>
+
+              <a href="#" class="social-group apple">
+                <i class="bi bi-apple"></i>
+                <span>Apple</span>
+              </a>
+            </div>
+          </div>
+          <!-- End Modal Login -->
+
+          <div class="modal__left none" id="modal__register__left">
+            <h6 class="modal__left-title">
+              Tạo tài khoản VnExpress Để sử dụng đầy đủ tính năng đọc báo và
+              tham gia cộng đồng hơn 4 triệu thành viên
+            </h6>
+            <form action="#" id="form-register">
+              <div class="form-group">
+                <label for="email_register"></label>
+                <input
+                  type="email"
+                  id="email_register"
+                  class="form-control"
+                  placeholder="Email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="password_register"></label>
+                <input
+                  type="password"
+                  id="password_register"
+                  class="form-control"
+                  placeholder="Mật khẩu"
+                />
+                <span class="show-password">
+                  <i class="bi bi-eye-fill"></i>
+                </span>
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-block btn-submit">
+                  Tạo tài khoản
+                </button>
+              </div>
+            </form>
+
+            <p>Khi bấm tạo tài khoản bạn đã đồng ý với quy định của tòa soạn</p>
+          </div>
+
+          <div class="modal__right none" id="modal__register__right">
+            <h6 class="modal__right-title">Tạo tài khoản với</h6>
+
+            <div class="social__container">
+              <a href="#" class="social-group facebook">
+                <i class="bi bi-facebook"></i>
+                <span>Facebook</span>
+              </a>
+
+              <a href="#" class="social-group google">
+                <i class="bi bi-google"></i>
+                <span>Google</span>
+              </a>
+
+              <a href="#" class="social-group apple">
+                <i class="bi bi-apple"></i>
+                <span>Apple</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- End Modal Main -->
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <!-- Left -->
+              <div class="col-md-6 header__left">
+                <div class="navbar__all">
+                  <a href="#"><i class="bi bi-list"></i></a>
+                </div>
+                <div class="logo__container">
+                  <img src="images/logo.svg" alt="vnexpress-logo" />
+                  <span class="timer">Thứ năm, 13/1/2022</span>
+                </div>
+              </div>
+              <!-- End left -->
+
+              <!-- Right -->
+              <div class="col-md-6 header__right">
+                <div class="header__right-btn">
+                  <a href="#" class="btn__link">
+                    <i class="bi bi-clock"></i>
+                    <span>Mới nhất</span>
+                  </a>
+
+                  <a href="#" class="btn__link">
+                    <i class="bi bi-globe"></i>
+                    <span>International</span>
+                  </a>
+                </div>
+
+                <div class="header__right-search">
+                  <input
+                    type="text"
+                    name="search"
+                    id="search"
+                    placeholder="Tìm kiếm"
+                  />
+                  <i class="bi bi-search icon-search"></i>
+                </div>
+
+                <div class="header__right-user">
+                  <a href="#">
+                    <i class="bi bi-person-fill"></i>
+                    <span>Đăng nhập</span>
+                  </a>
+                </div>
+              </div>
+              <!-- End right -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <header class="header__mobile">
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-md-12 d-flex justify-content-between align-items-center"
+          >
+            <a href="#" class="btn__navbar__mobile navbar__all">
+              <i class="bi bi-list"></i>
+            </a>
+
+            <a href="/">
+              <img src="images/logo.svg" alt="vnexpress-logo" />
+            </a>
+
+            <a href="#" class="btn__login__mobile">
+              <i class="bi bi-person-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="nav">
+      <ul class="navbar__container">
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link"
+            ><i class="bi bi-house-door-fill icon-home"></i
+          ></a>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Thời sự</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Góc nhìn</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Thế giới</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Video</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Podcasts</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Kinh doanh</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Khoa học</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Giải trí</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Thể thao</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Pháp luật</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Giáo dục</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Sức khoẻ</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Đời sống</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Du lịch</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Số hoá</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Xe</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Ý kiến</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Tâm sự</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav">
+          <a href="#" class="navbar__link">Hài</a>
+          <ul class="sub__menu">
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 1</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 2</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 3</a>
+            </li>
+
+            <li class="li navbar__nav">
+              <a href="#" class="navbar__link">Item 4</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="navbar__nav navbar__all">
+          <a href="#" class="navbar__link"
+            >Tất cả
+            <i class="bi bi-list"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="nav__full">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 nav__full__header">
+            <h5>Tất cả chuyên mục</h5>
+            <a href="#">Đóng <i class="bi bi-x-lg"></i></a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-10 nav__full__left">
+            <div class="row">
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items hidden">
+                    <a href="#" class="nav__full-link">Item 1</a>
+                  </li>
+                  <li class="nav__full-items hidden">
+                    <a href="#" class="nav__full-link">Item 2</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items hidden">
+                    <a href="#" class="nav__full-link">Item 1</a>
+                  </li>
+                  <li class="nav__full-items hidden">
+                    <a href="#" class="nav__full-link">Item 2</a>
+                  </li>
+                  <li class="nav__full-items hidden">
+                    <a href="#" class="nav__full-link">Item 3</a>
+                  </li>
+                  <li class="nav__full-items hidden">
+                    <a href="#" class="nav__full-link">Item 4</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items hidden">
+                    <a href="#" class="nav__full-link">Item 1</a>
+                  </li>
+                  <li class="nav__full-items hidden">
+                    <a href="#" class="nav__full-link">Item 2</a>
+                  </li>
+                  <li class="nav__full-items hidden">
+                    <a href="#" class="nav__full-link">Item 3</a>
+                  </li>
+                  <li class="nav__full-items hidden">
+                    <a href="#" class="nav__full-link">Item 4</a>
+                  </li>
+                  <li class="nav__full-items hidden">
+                    <a href="#" class="nav__full-link">Item 5</a>
+                  </li>
+                  <li class="nav__full-items hidden">
+                    <a href="#" class="nav__full-link">Item 6</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+
+              <!-- Container nav full -->
+              <div class="col-6 col-md-2">
+                <ul class="nav__full-nav">
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Thời sự</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Chính trị</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Dân sinh</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Giao thông</a>
+                  </li>
+                  <li class="nav__full-items">
+                    <a href="#" class="nav__full-link">Mekong</a>
+                  </li>
+                  <li class="nav__full-items nav__full-more">
+                    <a href="#" class="nav__full-link">Xem thêm</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End container nav full -->
+            </div>
+          </div>
+
+          <div class="col-12 col-md-2 nav__full__right">
+            <!-- Container nav full -->
+            <ul class="nav__full-nav">
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Nghe podcasts</a>
+              </li>
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Ảnh</a>
+              </li>
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Infographics</a>
+              </li>
+            </ul>
+            <!-- End container nav full -->
+
+            <!-- Container nav full -->
+            <ul class="nav__full-nav">
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Nghe podcasts</a>
+              </li>
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Ảnh</a>
+              </li>
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Infographics</a>
+              </li>
+            </ul>
+            <!-- End container nav full -->
+
+            <!-- Container nav full -->
+            <ul class="nav__full-nav">
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Nghe podcasts</a>
+              </li>
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Ảnh</a>
+              </li>
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Infographics</a>
+              </li>
+            </ul>
+            <!-- End container nav full -->
+
+            <!-- Container nav full -->
+            <ul class="nav__full-nav">
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Nghe podcasts</a>
+              </li>
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Ảnh</a>
+              </li>
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Infographics</a>
+              </li>
+            </ul>
+            <!-- End container nav full -->
+
+            <!-- Container nav full -->
+            <ul class="nav__full-nav">
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Nghe podcasts</a>
+              </li>
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Ảnh</a>
+              </li>
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Infographics</a>
+              </li>
+            </ul>
+            <!-- End container nav full -->
+
+            <!-- Container nav full -->
+            <ul class="nav__full-nav">
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Nghe podcasts</a>
+              </li>
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Ảnh</a>
+              </li>
+              <li class="nav__full-items">
+                <a href="#" class="nav__full-link">Infographics</a>
+              </li>
+            </ul>
+            <!-- End container nav full -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__1">
+      <div class="container py-4">
+        <div class="row">
+          <!-- Story -->
+          <div class="col-md-8 section__1__story">
+            <div class="row p-0">
+              <div class="col-md-8 p-0 section__1__img">
+                <img
+                  src="./images/4-lo-dat-thu-thiem-03chi-jpeg_1642103093.jpg"
+                  alt="img"
+                  class="img-fluid"
+                />
+              </div>
+
+              <div class="col-md-4 p-4 section__1__content">
+                <a href="#">
+                  <h5>Toàn cảnh đấu giá 4 lô 'đất vàng' Thủ Thiêm</h5>
+                  <p class="description">
+                    Bốn lô đất Thủ Thiêm được đấu giá thành công hơn 37.000 tỷ
+                    đồng, trong đó lô 3.12 mỗi m2 trúng đấu giá đạt kỷ lục 2,4
+                    tỷ đồng nhưng hiện doanh nghiệp đã xin bỏ cọc.
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-md-4 px-2 section__1__story-child">
+                <a href="#">
+                  <h6 class="font-weight-bold">
+                    Đỗ Hùng Dũng trở thành tân đội trưởng Việt Nam
+                  </h6>
+                  <p class="description">
+                    Trong ngày đầu hội quân hôm nay 13/1, HLV Park Hang-seo
+                    thông báo quyết định trao băng thủ quân cho tiền vệ Đỗ Hùng
+                    Dũng, còn Công Phượng và Tiến Dũng làm đội phó.
+                  </p>
+                </a>
+              </div>
+
+              <div class="col-md-4 px-2 section__1__story-child">
+                <a href="#">
+                  <h6 class="font-weight-bold">
+                    Đỗ Hùng Dũng trở thành tân đội trưởng Việt Nam
+                  </h6>
+                  <p class="description">
+                    Trong ngày đầu hội quân hôm nay 13/1, HLV Park Hang-seo
+                    thông báo quyết định trao băng thủ quân cho tiền vệ Đỗ Hùng
+                    Dũng, còn Công Phượng và Tiến Dũng làm đội phó.
+                  </p>
+                </a>
+              </div>
+
+              <div class="col-md-4 px-2 section__1__story-goc-nhin">
+                <a href="#">
+                  <h6 class="font-weight-bold">Góc nhìn</h6>
+                  <h6 class="font-weight-bold">Trí thức là ai?</h6>
+                  <p class="description">
+                    Lâu nay, khái niệm trí thức thường bị hiểu thiên lệch vì
+                    nhuốm màu bằng cấp.
+                  </p>
+
+                  <div
+                    class="auth d-flex justify-content-between align-items-center"
+                  >
+                    <p class="font-italic">Nguyễn Văn Tuấn</p>
+                    <img
+                      src="./images/nguyenvantuanpng-1589760561.png"
+                      alt="img"
+                      class="img__auth"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- End story -->
+
+          <!-- Start ADS -->
+          <div class="col-md-4 text-center">
+            <img
+              src="https://via.placeholder.com/300x500.png?text=ADS"
+              alt="ADS"
+              class="img-fluid"
+            />
+          </div>
+          <!-- End ADS -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section__2">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-4 px-1 section__2__left">
+            <!-- Post News -->
+            <div class="section__2__news">
+              <a href="#">
+                <h6 class="font-weight-bold">
+                  83% người Australia muốn Djokovic bị trục xuất
+                </h6>
+                <div class="row">
+                  <div class="col-md-5">
+                    <img
+                      src="./images/2-1642090591-2419-1642090634.jpg"
+                      alt="news"
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <div class="col-md-7 px-1">
+                    <p class="description">
+                      Cuộc khảo sát của hãng tin News Corp cho thấy 83% người
+                      Australia không muốn Novak Djokovic thi đấu tại Australia.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- End Post News -->
+
+            <!-- Post News -->
+            <div class="section__2__news">
+              <a href="#">
+                <h6 class="font-weight-bold">
+                  83% người Australia muốn Djokovic bị trục xuất
+                </h6>
+                <div class="row">
+                  <div class="col-md-5">
+                    <img
+                      src="./images/2-1642090591-2419-1642090634.jpg"
+                      alt="news"
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <div class="col-md-7 px-1">
+                    <p class="description">
+                      Cuộc khảo sát của hãng tin News Corp cho thấy 83% người
+                      Australia không muốn Novak Djokovic thi đấu tại Australia.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- End Post News -->
+
+            <!-- Post News -->
+            <div class="section__2__news">
+              <a href="#">
+                <h6 class="font-weight-bold">
+                  83% người Australia muốn Djokovic bị trục xuất
+                </h6>
+                <div class="row">
+                  <div class="col-md-5">
+                    <img
+                      src="./images/2-1642090591-2419-1642090634.jpg"
+                      alt="news"
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <div class="col-md-7 px-1">
+                    <p class="description">
+                      Cuộc khảo sát của hãng tin News Corp cho thấy 83% người
+                      Australia không muốn Novak Djokovic thi đấu tại Australia.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- End Post News -->
+
+            <!-- Post News -->
+            <div class="section__2__news">
+              <a href="#">
+                <h6 class="font-weight-bold">
+                  83% người Australia muốn Djokovic bị trục xuất
+                </h6>
+                <div class="row">
+                  <div class="col-md-5">
+                    <img
+                      src="./images/2-1642090591-2419-1642090634.jpg"
+                      alt="news"
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <div class="col-md-7 px-1">
+                    <p class="description">
+                      Cuộc khảo sát của hãng tin News Corp cho thấy 83% người
+                      Australia không muốn Novak Djokovic thi đấu tại Australia.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- End Post News -->
+
+            <!-- Post News -->
+            <div class="section__2__news">
+              <a href="#">
+                <h6 class="font-weight-bold">
+                  83% người Australia muốn Djokovic bị trục xuất
+                </h6>
+                <div class="row">
+                  <div class="col-md-5">
+                    <img
+                      src="./images/2-1642090591-2419-1642090634.jpg"
+                      alt="news"
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <div class="col-md-7 px-1">
+                    <p class="description">
+                      Cuộc khảo sát của hãng tin News Corp cho thấy 83% người
+                      Australia không muốn Novak Djokovic thi đấu tại Australia.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- End Post News -->
+
+            <!-- Post News -->
+            <div class="section__2__news">
+              <a href="#">
+                <h6 class="font-weight-bold">
+                  83% người Australia muốn Djokovic bị trục xuất
+                </h6>
+                <div class="row">
+                  <div class="col-md-5">
+                    <img
+                      src="./images/2-1642090591-2419-1642090634.jpg"
+                      alt="news"
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <div class="col-md-7 px-1">
+                    <p class="description">
+                      Cuộc khảo sát của hãng tin News Corp cho thấy 83% người
+                      Australia không muốn Novak Djokovic thi đấu tại Australia.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- End Post News -->
+          </div>
+
+          <div class="col-md-8 section__2__right">
+            <!-- Container Post Right -->
+            <div class="section__2__news">
+              <div class="row">
+                <div class="col-12 col-md-12 mx-3 section__2__news__header">
+                  <h5 class="font-weight-bold">Kinh doanh</h5>
+                </div>
+              </div>
+
+              <!-- Post News -->
+              <div class="row my-3 section__2__news-container">
+                <div class="col-md-4 section__2__news-img">
+                  <a href="#">
+                    <img
+                      src="./images/106999671-1641927437898-gettyi-6768-8220-1642066732.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+
+                <div class="col-md-8 p-0 section__2__news-content">
+                  <a href="#">
+                    <h5 class="title">
+                      Ba lưu ý trước khi mở thêm thẻ tín dụng
+                    </h5>
+
+                    <p class="description">
+                      Nếu bạn đang muốn mở thêm một thẻ tín dụng trong năm nay,
+                      đây sẽ là ba điều nên cân nhắc trước khi đưa ra quyết
+                      định.
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <!-- End Post News -->
+
+              <!-- Post News -->
+              <div class="row my-3 section__2__news-container">
+                <div class="col-md-4 section__2__news-img">
+                  <a href="#">
+                    <img
+                      src="./images/106999671-1641927437898-gettyi-6768-8220-1642066732.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+
+                <div class="col-md-8 p-0 section__2__news-content">
+                  <a href="#">
+                    <h5 class="title">
+                      Ba lưu ý trước khi mở thêm thẻ tín dụng
+                    </h5>
+
+                    <p class="description">
+                      Nếu bạn đang muốn mở thêm một thẻ tín dụng trong năm nay,
+                      đây sẽ là ba điều nên cân nhắc trước khi đưa ra quyết
+                      định.
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <!-- End Post News -->
+
+              <!-- Post News -->
+              <div class="row my-3 section__2__news-container">
+                <div class="col-md-4 section__2__news-img">
+                  <a href="#">
+                    <img
+                      src="./images/106999671-1641927437898-gettyi-6768-8220-1642066732.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+
+                <div class="col-md-8 p-0 section__2__news-content">
+                  <a href="#">
+                    <h5 class="title">
+                      Ba lưu ý trước khi mở thêm thẻ tín dụng
+                    </h5>
+
+                    <p class="description">
+                      Nếu bạn đang muốn mở thêm một thẻ tín dụng trong năm nay,
+                      đây sẽ là ba điều nên cân nhắc trước khi đưa ra quyết
+                      định.
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <!-- End Post News -->
+            </div>
+            <!-- End Container Post -->
+
+            <!-- Container Post Right -->
+            <div class="section__2__news">
+              <div class="row">
+                <div class="col-12 col-md-12 mx-3 section__2__news__header">
+                  <h5 class="font-weight-bold">Thể thao</h5>
+                </div>
+              </div>
+
+              <!-- Post News -->
+              <div class="row my-3 section__2__news-container">
+                <div class="col-md-4 section__2__news-img">
+                  <a href="#">
+                    <img
+                      src="./images/maxresdefault-jpeg-6931-163011-4892-8573-1642062024.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+
+                <div class="col-md-8 p-0 section__2__news-content">
+                  <a href="#">
+                    <h5 class="title">
+                      Hợp đồng dài hạn của cầu thủ châu Âu có lợi hay hại?
+                    </h5>
+                    <p class="description">
+                      Việc Lorenzo Insigne sang Mỹ thi đấu với giao kèo bốn năm
+                      cho thấy xu hướng không thích ký ngắn hạn của các
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <!-- End Post News -->
+
+              <!-- Post News -->
+              <div class="row my-3 section__2__news-container">
+                <div class="col-md-4 section__2__news-img">
+                  <a href="#">
+                    <img
+                      src="./images/maxresdefault-jpeg-6931-163011-4892-8573-1642062024.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+
+                <div class="col-md-8 p-0 section__2__news-content">
+                  <a href="#">
+                    <h5 class="title">
+                      Hợp đồng dài hạn của cầu thủ châu Âu có lợi hay hại?
+                    </h5>
+                    <p class="description">
+                      Việc Lorenzo Insigne sang Mỹ thi đấu với giao kèo bốn năm
+                      cho thấy xu hướng không thích ký ngắn hạn của các
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <!-- End Post News -->
+
+              <!-- Post News -->
+              <div class="row my-3 section__2__news-container">
+                <div class="col-md-4 section__2__news-img">
+                  <a href="#">
+                    <img
+                      src="./images/maxresdefault-jpeg-6931-163011-4892-8573-1642062024.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+
+                <div class="col-md-8 p-0 section__2__news-content">
+                  <a href="#">
+                    <h5 class="title">
+                      Hợp đồng dài hạn của cầu thủ châu Âu có lợi hay hại?
+                    </h5>
+                    <p class="description">
+                      Việc Lorenzo Insigne sang Mỹ thi đấu với giao kèo bốn năm
+                      cho thấy xu hướng không thích ký ngắn hạn của các
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <!-- End Post News -->
+            </div>
+            <!-- End Container Post -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__3">
+      <div class="container py-4">
+        <div class="row">
+          <!-- Col 1 -->
+          <div class="col-md-4 px-4 section__3-line">
+            <div class="section__3__news-container">
+              <div class="row">
+                <div class="col-md-12 section__3__news-header">
+                  <h5 class="font-weight-bold">Thời sự</h5>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 section__3__news-content">
+                  <a href="#">
+                    <img
+                      src="./images/chungcuhaibatrungjpg-164213102-9671-7866-1642134064.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+
+                    <h5 class="font-weight-bold mt-2 title">
+                      TP HCM đẩy nhanh tiến độ xây mới 6 chung cư cũ
+                    </h5>
+
+                    <p class="description">
+                      Sáu chung cư cũ ở quận 1, 3, Tân Bình và Bình Thạnh tổng
+                      diện tích hơn 244.000 m2 với gần 3.000 căn hộ đã hoàn tất
+                      di dời để xây mới trong năm nay.
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Col 1 -->
+
+          <!-- Col 2 -->
+          <div class="col-md-4 px-4 section__3-line">
+            <div class="section__3__news-container">
+              <div class="row">
+                <div class="col-md-12 section__3__news-header">
+                  <h5 class="font-weight-bold">Thế giới</h5>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 section__3__news-content">
+                  <a href="#">
+                    <img
+                      src="./images/5c353cb622684a61aee96a832a374d-2642-9576-1642135286.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+
+                    <h5 class="font-weight-bold mt-2 title">
+                      Thông điệp ăn miếng trả miếng Triều Tiên gửi tới Mỹ
+                    </h5>
+
+                    <p class="description">
+                      Với hai vụ thử tên lửa siêu vượt âm liên tiếp, Triều Tiên
+                      dường như muốn chứng minh sức mạnh và răn đe Mỹ rằng họ có
+                      thể "ăn miếng trả miếng".
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Col 2 -->
+
+          <!-- Col 3 -->
+          <div class="col-md-4 px-4 section__3-line">
+            <div class="section__3__news-container">
+              <div class="row">
+                <div class="col-md-12 section__3__news-header">
+                  <h5 class="font-weight-bold">Pháp luật</h5>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 section__3__news-content">
+                  <a href="#">
+                    <img
+                      src="./images/CACBICAOTAIPHIENTOA2022-164213-1464-5733-1642133325.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+
+                    <h5 class="font-weight-bold mt-2 title">
+                      7 người hầu tòa trong vụ sai phạm đất lớn nhất Cần Thơ
+                    </h5>
+
+                    <p class="description">
+                      Ông Nguyễn Văn Tuấn - cựu phó chủ tịch quận Bình Thuỷ,
+                      cùng 6 người bị xét xử về hành vi chuyển mục đích hơn
+                      14.000 m2 đất trái pháp luật.
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Col 3 -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section__4">
+      <div class="container py-4">
+        <div class="section__4__news-container">
+          <div class="row">
+            <div class="col-md-12 p-0 section__4__news-header">
+              <h5 class="font-weight-bold">Du lịch</h5>
+            </div>
+          </div>
+
+          <div class="row my-2">
+            <!-- Left -->
+            <div class="col-md-5 p-md-0 section__4__news__left">
+              <div class="section__4__news-main">
+                <a href="#">
+                  <img
+                    src="./images/nh5ngunbchngc-1642042018-16420-6614-2263-1642130620.jpg"
+                    alt="img"
+                    class="img-fluid"
+                  />
+                  <h5 class="font-weight-bold title my-2">
+                    Nham trám - đặc sản trứ danh của Thái Nguyên
+                  </h5>
+                  <p class="description">
+                    Về xã Hà Châu, du khách sẽ được thưởng thức món nham trám
+                    thơm bùi đặc trưng làm từ quả trám đen om, thịt ba chỉ, cá
+                    nướng...
+                  </p>
+                </a>
+              </div>
+            </div>
+            <!-- End left -->
+
+            <!-- Middle -->
+            <div class="col-md-3 p-0 section__4__news__middle">
+              <div class="row">
+                <!-- Wrapper -->
+                <div class="col-md-12 py-0 section__4__news-main">
+                  <a href="#">
+                    <img
+                      src="./images/nhatbanmuadong-1642047647-1642136727.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                    <h5 class="font-weight-bold mt-2 title">
+                      Tokyo lung linh trong mùa tuyết rơi
+                    </h5>
+                  </a>
+                </div>
+                <!-- End Wrapper -->
+
+                <!-- Wrapper -->
+                <div class="col-md-12 py-0 section__4__news-main">
+                  <a href="#">
+                    <img
+                      src="./images/toilet-11-9667-1642068676-1642-1905-9184-1642125098.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                    <h5 class="font-weight-bold mt-2 title">
+                      Bốt vệ sinh công cộng lộ thiên ở Amsterdam
+                    </h5>
+                  </a>
+                </div>
+                <!-- End Wrapper -->
+              </div>
+            </div>
+            <!-- End Middle -->
+
+            <!-- Right -->
+            <div class="col-md-4 section__4__news__right">
+              <div class="row px-2 pl-md-3">
+                <!-- container -->
+                <div class="col-md-12 d-flex px-0 py-2 section__4__news-main">
+                  <a href="#">
+                    <h6 class="font-weight-bold mr-1">
+                      Cực quang huyền ảo qua lăng kính của khách Việt
+                    </h6>
+                  </a>
+
+                  <a href="#">
+                    <video
+                      loop
+                      muted
+                      playsinline
+                      preload="auto"
+                      src="./images/ezgif52d1f098d80-1641378859-5697-1641378932.mp4"
+                    ></video>
+                  </a>
+                </div>
+                <!-- end container -->
+
+                <!-- container -->
+                <div class="col-md-12 d-flex px-0 py-2 section__4__news-main">
+                  <a href="#">
+                    <h6 class="font-weight-bold mr-1">
+                      Du khách chuộng khu nghỉ cao cấp dịp Tết
+                    </h6>
+                  </a>
+
+                  <a href="#">
+                    <img
+                      src="./images/avanaretreatcover-1642062911-1-3707-2486-1642062934.jpg"
+                      alt="img"
+                    />
+                  </a>
+                </div>
+                <!-- end container -->
+
+                <!-- container -->
+                <div class="col-md-12 d-flex px-0 py-2 section__4__news-main">
+                  <a href="#">
+                    <h6 class="font-weight-bold mr-1">
+                      Cực quang huyền ảo qua lăng kính của khách Việt
+                    </h6>
+                  </a>
+
+                  <a href="#">
+                    <video
+                      loop
+                      muted
+                      playsinline
+                      preload="auto"
+                      src="./images/ezgif52d1f098d80-1641378859-5697-1641378932.mp4"
+                    ></video>
+                  </a>
+                </div>
+                <!-- end container -->
+
+                <!-- container -->
+                <div class="col-md-12 d-flex px-0 py-2 section__4__news-main">
+                  <a href="#">
+                    <h6 class="font-weight-bold mr-1">
+                      Du khách chuộng khu nghỉ cao cấp dịp Tết
+                    </h6>
+                  </a>
+
+                  <a href="#">
+                    <img
+                      src="./images/avanaretreatcover-1642062911-1-3707-2486-1642062934.jpg"
+                      alt="img"
+                    />
+                  </a>
+                </div>
+                <!-- end container -->
+              </div>
+            </div>
+            <!-- End right -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-2 p-0 px-2">
+            <ul class="footer__menu">
+              <li class="footer__menu__items">
+                <a href="/" class="footer__menu__link font-weight-bold"
+                  >Trang chủ</a
+                >
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link font-weight-bold"
+                  >Podcast</a
+                >
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link font-weight-bold">Ảnh</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link font-weight-bold"
+                  >Infographics</a
+                >
+              </li>
+            </ul>
+
+            <hr />
+            <ul class="footer__menu">
+              <li class="footer__menu__items">
+                <a href="/" class="footer__menu__link font-weight-bold"
+                  >Mới nhất</a
+                >
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link font-weight-bold"
+                  >Xem nhiều</a
+                >
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link font-weight-bold"
+                  >Tin nóng</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 p-0 px-2">
+            <ul class="footer__menu">
+              <li class="footer__menu__items">
+                <a href="/" class="footer__menu__link">Thời sự</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Góc nhìn</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Thế giới</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Kinh doanh</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Giải trí</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 p-0 px-2">
+            <ul class="footer__menu">
+              <li class="footer__menu__items">
+                <a href="/" class="footer__menu__link">Thể thao</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Pháp luật</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Giáo dục</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Sức khoẻ</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Đời sống</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Du lịch</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-1 p-0 px-2 line-right">
+            <ul class="footer__menu">
+              <li class="footer__menu__items">
+                <a href="/" class="footer__menu__link">Khoa học</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Số hoá</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Xe</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Ý kiến</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Tâm sự</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Hài</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 p-0 px-2 px-md-3 line-right">
+            <ul class="footer__menu">
+              <li class="footer__menu__items">
+                <a href="/" class="footer__menu__link">Rao vặt</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Shop VnEpress</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Startup</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Mua ảnh VnEpress</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">Vhome</a>
+              </li>
+              <li class="footer__menu__items">
+                <a href="#" class="footer__menu__link">eBox</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-3 p-0 px-2">
+            <ul class="footer__menu">
+              <li class="footer__menu__items">
+                <p class="footer__menu__items-title">Tải ứng dụng</p>
+                <div class="footer__menu__btn-group">
+                  <a href="#" class="btn__link">
+                    <i class="bi bi-globe"></i>
+                    <span>VnEpress</span>
+                  </a>
+
+                  <a href="#" class="btn__link">
+                    <i class="bi bi-globe"></i>
+                    <span>International</span>
+                  </a>
+                </div>
+              </li>
+
+              <li class="footer__menu__items">
+                <p class="footer__menu__items-title">Liên hệ</p>
+                <div class="footer__menu__link-group">
+                  <a href="#" class="footer__menu__link"
+                    ><i class="bi bi-envelope-fill mr-1"></i>Toà soạn</a
+                  >
+                  <a href="#" class="footer__menu__link">Quảng cáo</a>
+                  <a href="#" class="footer__menu__link"
+                    ><i class="bi bi-people-fill mr-1"></i>Hợp tác bản quyền</a
+                  >
+                </div>
+              </li>
+
+              <hr />
+
+              <li class="footer__menu__items">
+                <p class="footer__menu__items-title">Đường dây nóng</p>
+                <div
+                  class="footer__menu__phone-group d-flex justify-content-between"
+                >
+                  <div class="phone-group">
+                    <h6 class="font-weight-bold">083.888.0123</h6>
+                    <p>(Hà Nội)</p>
+                  </div>
+
+                  <div class="phone-group">
+                    <h6 class="font-weight-bold">082.233.3555</h6>
+                    <p>(TP. Hồ Chí Minh)</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row pt-4">
+          <div class="col-md-12 d-flex justify-content-between footer__2">
+            <div class="footer__2__left">
+              <img src="./images/logo.svg" alt="logo" />
+            </div>
+
+            <div class="footer__2__right">
+              <a href="#">RSS</a>
+              <p class="m-0 mx-4">Theo dõi VnEpress trên</p>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 footer__3">
+            <div>
+              <p class="font-weight-bold">
+                Báo tiếng Việt nhiều người xem nhất
+              </p>
+              <p>Thuộc Bộ Khoa học Công nghệ</p>
+              <p>Số giấy phép: 548/GP-BTTTT ngày 24/08/2021</p>
+            </div>
+
+            <div>
+              <p>Phó Tổng Biên tập phụ trách: Phạm Hiếu</p>
+              <p>
+                Địa chỉ: Tầng 5, Tòa nhà FPT, 17 phố Duy Tân, Cầu Giấy, Hà Nội
+              </p>
+              <p>Điện thoại: 024 7300 8899 - máy lẻ 4500</p>
+            </div>
+
+            <div>
+              <p>&copy; 1997-2022. Toàn bộ bản quyền thuộc VnExpress</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./vendor/bootstrap/js/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/function.js"></script>
+  </body>
+</html>

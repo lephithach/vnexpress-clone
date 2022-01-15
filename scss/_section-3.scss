@@ -1,0 +1,25 @@
+.section__3 {
+  .container {
+    border-bottom: $lineBlack !important;
+  }
+
+  .section__3-line + .section__3-line {
+    border-left: $lineBlack;
+  }
+
+  .section__3__news-container {
+    .section__3__news-header {
+      border-bottom: 2px solid $colorPrimary;
+      padding: 0;
+    }
+
+    .section__3__news-content {
+      margin-top: 1rem;
+      padding: 0;
+
+      .description {
+        font-size: 14px;
+      }
+    }
+  }
+}
